@@ -1,5 +1,5 @@
 # semester2
-//Penggabungan viod(fungsi),array,pointer&operasi file
+//Penggabungan void(fungsi),array,pointer&operasi file
 #include <fstream>
 #include <conio.h>
 #include <iostream>
