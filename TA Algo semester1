@@ -1,0 +1,131 @@
+# Coding-from-College
+//penggabungan looping, pemilihan
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+int main(){
+	int pilih,tiket, snack,jumlah;
+	int film1,f1,f2,f3, payment, bank;
+	string tmpt_duduk;
+	int food1,pop1,pop2,pop3,snack1;
+	int a[3]={40000,35000,35000},*x,*y,*z;
+	x=&a[0];
+	y=&a[1];
+	z=&a[2];
+	int b[3]={30000,35000,40000},*p,*q,*r;
+	p=&b[0];
+	q=&b[1];
+	r=&b[2];
+	
+	cout<<"Selamat Datang di Website Kami"<<endl;
+	cout<<"Dibawah adalah Film yang tersedia"<<endl;
+	cout<<"1. Maleficent 2		"<<*x<<endl;
+	cout<<"2. Toy Story 4		"<<*y<<endl;
+	cout<<"3. Frozen 2		"<<*z<<endl;
+	cout<<"Silahkan Pilih Film yang Anda Inginkan : ";
+	cin>>pilih;
+	switch(pilih){
+		case 1 :
+			cout<<"Anda Memilih Maleficent 2"<<endl;
+			f1=40000;
+			cout<<"Berapa Tiket yang Anda Ingin Pesan?"<<endl;
+			cin>>tiket;
+			film1=f1*tiket;
+		break;
+		case 2 :
+			cout<<"Anda Memilih Toy Story 4"<<endl;
+			f2=35000;
+			cout<<"Berapa Tiket yang Anda Ingin Pesan?"<<endl;
+			cin>>tiket;
+			film1=f2*tiket;
+		break;
+		case 3 :
+			cout<<"Anda Memilih Frozen 2"<<endl;
+			f3=35000;
+			cout<<"Berapa Tiket yang Anda Ingin Pesan?"<<endl;
+			cin>>tiket;
+			film1=f3*tiket;
+		break;
+	}
+	
+	cout<<"Tempat Duduk yang Tersedia"<<endl;
+	for(int i=1; i<6; i++){
+		for(int j=1; j<6; j++){
+			cout<<"("<<i<<"."<<j<<")";
+		}
+		cout<<endl;
+	}
+	cout<<"\nSilahkan Pilih Tempat Duduk Anda : "; 
+	cin>>tmpt_duduk;
+	
+	cout<<"Kami Menyiapkan Snack untuk Anda Nikmati selama Menonton"<<endl;
+	cout<<"1. Popcorn + Coca-cola			"<<*p<<endl;
+	cout<<"2. Popcorn Caramel + Cocal-cola		"<<*q<<endl;
+	cout<<"3. Roti isi Daging + Coca-cola		"<<*r<<endl;
+	cout<<"4. Tidak Memilih"<<endl;
+	cout<<"Pilihan Anda "; 
+	cin>>snack;
+	switch(snack){
+		case 1 :
+			cout<<"Anda memilih Popcorn dan Coca-cola"<<endl;
+			pop1=30000;
+			cout<<"Berapa banyak Anda ingin memesan?"<<endl;
+			cin>>snack1;
+			food1=pop1*snack1;
+		break;
+		case 2 :
+			cout<<"Anda memilih Popcorn Caramel dan Coca-cola"<<endl;
+			pop2=35000;
+			cout<<"Berapa banyak Anda ingin memesan?"<<endl;
+			cin>>snack1;
+			food1=pop2*snack1;
+		break;
+		case 3 :
+			cout<<"Anda memilih Roti isi Daging dan Coca-cola"<<endl;
+			pop3=40000;
+			cout<<"Berapa banyak Anda ingin memesan?"<<endl;
+			cin>>snack1;
+			food1=pop3*snack1;
+		break;
+	}
+	cout<<"Total yang harus Anda bayar : ";
+	jumlah=film1+food1;
+	cout<<jumlah;
+	cout<<endl;
+	
+	cout<<"Metode pembayaran yang tersedia"<<endl;
+	cout<<"1. Transfer"<<endl;
+	cout<<"2. Bayar Ditempat"<<endl;
+	cout<<"Pilihan Anda : ";
+	cin>>payment;
+	if(payment==1){
+		cout<<"1. BCA"<<endl;
+		cout<<"2. BNI"<<endl;
+		cout<<"3. Mandiri"<<endl;
+		cout<<"Pilih Bank yang dituju ";
+		cin>>bank;
+		switch(bank){
+			case 1 :
+				cout<<"Anda memilih BCA"<<endl;
+				cout<<"Nomor rekening 003234433212"<<endl;
+			break;
+			case 2 :
+				cout<<"Anda memilih BNI"<<endl;
+				cout<<"Nomor rekening 006899876533<<"<<endl;
+			break;
+			case 3 :
+				cout<<"Anda memilih Mandiri"<<endl;
+				cout<<"Nomor rekening 009223422675"<<endl;
+			break;
+		}
+	}else{
+		cout<<"Mohon datang ke tempat bioskop setelah memesan tiket."<<endl;
+		cout<<"Batas pembayaran 2 Hari"<<endl;
+	}
+	cout<<endl;
+	cout<<"Terima Kasih telah Mengunjungi Website Kami"<<endl;;
+	cout<<"cr. nthswny";
+	
+	return 0;
+}
