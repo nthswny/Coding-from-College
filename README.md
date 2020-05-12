@@ -11,7 +11,7 @@ void file(){
 	int bahan[3]={35000, 20000, 15000},*x , *y , *z;
 	x=&bahan[0];
 	y=&bahan[1];
-	z=&bahan[2];;
+	z=&bahan[2];
 	
     ofstream outfile;
     outfile.open("cnthfile.txt");
