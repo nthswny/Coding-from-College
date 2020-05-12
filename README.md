@@ -1,4 +1,4 @@
-# semester2
+# TA Algo semester2
 //Penggabungan void(fungsi),array,pointer&operasi file
 #include <fstream>
 #include <conio.h>
