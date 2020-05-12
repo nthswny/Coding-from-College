@@ -1,0 +1,68 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+using namespace std;
+
+void judul(){
+	int terbit[3]={2004,2005,2006}, *x, *y, *z;
+	x=&terbit[0];
+	y=&terbit[1];
+	z=&terbit[2];
+	
+	cout<<"Judul Buku yang Dapat di Pinjam"<<endl;
+	cout<<"Sherlock Holmes		tahun terbit "<<*x<<endl;
+	cout<<"Harry Potter		tahun terbit "<<*y<<endl;
+	cout<<"The Hunger Games	tahun terbit "<<*z<<endl;
+}
+
+int main(){
+	int kartu;
+	string nama, buku, alamat, tgl_pinjam, tlpn;
+	
+	cout<<"Tugas UAS Praktikum Struktur Data "<<endl;
+	cout<<"Buatlah program untuk membuat kartu peminjaman buku."<<endl; 
+	cout<<"Yang menginputkan nama peminjam, nama buku, tahun terbit, tanggal peminjaman."<<endl<<endl;
+	cout<<"Nama : Nathasya Sri Wahyuni"<<endl;
+	cout<<"NPM : 085019024"<<endl;
+	cout<<"Prodi : Sistem Informasi"<<endl;
+	cout<<"======================================="<<endl;
+	
+	cout<<"Selamat Datang di Perpustakaan Kami"<<endl;	
+	cout<<"Apakah Anda sudah memiliki KPB (Kartu Pinjam Buku)?"<<endl;
+	cout<<"1. Sudah"<<endl;
+	cout<<"2. Belum"<<endl;
+	cout<<"Masukkan pilihan Anda : ";
+	cin>>kartu;
+	switch(kartu){
+		case 1 :
+			cout<<"=================================="<<endl;
+			cout<<"Masukkan Nama Anda : ";
+			cin>>nama;
+		break;
+			
+		case 2 :
+			cout<<"=================================="<<endl;
+			cout<<"Masukkan Nama Lengkap : ";
+			cin>>nama;
+			cout<<"Masukkan Alamat : ";
+			cin>>alamat;
+			cout<<"No Telepon : ";
+			cin>>tlpn;
+	}
+	cout<<endl;
+	judul();
+	cout<<"Buku yang ingin dipinjam : ";
+	cout<<"(Ketik tanpa spasi)"<<endl;
+	cin>>buku;
+	cout<<"\nBatas Peminjaman 3 Hari"<<endl;
+	cout<<"Ketik Tanggal Peminjaman : "<<endl;
+	cin>>tgl_pinjam;
+	
+	cout<<endl;
+	cout<<nama<<" telah meminjam buku "<<buku;
+	cout<<endl;
+	cout<<"Mohon kembalikan buku sesuai batas waktu yang diberikan"<<endl;
+	cout<<"Terima Kasih";
+	
+	return 0;
+}
